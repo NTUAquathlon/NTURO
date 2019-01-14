@@ -1,4 +1,486 @@
-<head>
-<script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/b450945d0ae655f1d8ba72124/600ba8eb826cc233fc701b483.js");</script>
-</head>
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="NTURO is a race for all multi-sports enthusiast to have a platform for competitive race for both the swim and run discipline. This race is a non-stop burst of swim-run-swim-run-swim-run without any breaks. With the added element of speed of transition during the race.">
+    <meta name="author" content="NTU Aquathlon">
+    <title>NTURO 2019</title>
+    <link rel=icon href=images/favicon.png>
+    <link href="https://getbootstrap.com/docs/4.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+      .sections{
+      	padding-top:50px;
+      	padding-bottom:50px;
+      }
+
+      /*footer{
+      	margin-top:10%;
+      }*/
+      nav{
+      	background-color: white;
+      	/*color:white: */
+      }
+
+      #category .row div{
+      	padding-top:30px;
+      	padding-bottom:30px;
+      }
+
+
+
+      /* Header */
+
+      html{
+        scroll-behavior: smooth;
+      }
+
+
+
+header {
+  position: relative;
+  background-color: black;
+  height: 100%;
+  min-height: 25rem;
+  width: 100%;
+  overflow: hidden;
+}
+
+p{
+  text-align: left;
+}
+
+header video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: 0;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+
+header .container {
+  position: relative;
+  z-index: 2;
+}
+
+header .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  opacity: 0.5;
+  z-index: 1;
+}
+
+header .mobile-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  opacity: 0.5;
+  z-index: 1;
+}
+
+.fill {
+  height:100%;
+  min-height:100%;
+}
+
+html, body{
+  height:100%;
+}
+
+.navbarSupportedContent{
+  display:flex;
+}
+.navbarSupportedContent ul {
+  margin:0 3rem 0 0;
+  padding:0;
+  list-style:none;
+  display:flex;
+  flex:1 0 0%;
+  justify-content:space-between
+}
+.navbarSupportedContent ul a {
+  display:block;
+  padding:5px 10px;
+}
+
+header .mobile-overlay {
+    /*background: url('https://source.unsplash.com/XT5OInaElMw/1600x900') black no-repeat center center scroll;*/
+    background-size: cover;
+    filter: blur(5px);
+  }
+
+  .arrow {
+          font-size:50px;
+          animation: blinker 3s linear infinite;
+          -webkit-transform: rotate(90deg);
+            -moz-transform: rotate(90deg);
+            -o-transform: rotate(90deg);
+            -ms-transform: rotate(90deg);
+            transform: rotate(90deg) scale(.5, 1);
+    /*transform: ;*/
+      }
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
+.table-responsive td{
+      text-align:center;
+    }
+    #info h3{
+      padding-top:50px;
+    }
+    
+  #sponsors img{
+    /*max-height: ;*/
+    max-height:300px;
+    height:auto;
+    max-width:100%;
+
+  }
+  #sponsors .row{
+    padding-top:20px;
+    padding-bottom:20px;
+  }
+  #faq .row div{
+    padding-top:15px;
+    padding-bottom:15px;
+  }
+
+
+</style>
+
+  </head>
+  <body data-spy="scroll" data-target="#navbar">
+<nav class="navbar navbar-light bg-light fixed-top navbar-expand-lg" id="navbar">
+  <div class="container">
+    <a class="navbar-brand" href="#">
+      <img src="images/logo/logo.png" alt="NTURO" class="img-fluid" style="max-width:24px;">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+     <ul class="navbar-nav w-100 justify-content-around">
+      <li class="nav-item">
+        <a class="nav-link" href="#about">About</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#category">Categories</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#info">Information</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#partners">Partners</a>
+      </li>
+      <!-- <li class="nav-item">
+        <a class="nav-link" href="#sponsors">Sponsors</a>
+      </li> -->
+      <li class="nav-item">
+        <a class="nav-link" href="#faq">FAQ</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#contact">Contact</a>
+      </li>
+    </ul>
+
+  </div>
+</div>
+</nav>
+
+<header>
+  
+  <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop" class="d-none d-md-block d-lg-block">
+    <!-- <source src="video/running.mp4" type="video/mp4"> -->
+  </video>
+  <div class="overlay d-none d-md-block d-lg-block" ></div>
+  <div class="mobile-overlay d-md-none d-lg-none" ></div>
+  <div class="container h-100 fill">
+      <div class="d-flex justify-content-between h-100 text-left align-items-center">
+        <div class="text-white">
+          <h1 class="display-3">NTURO 2019</h1>
+          <h2>Endurance beyond limits.</h2>
+          <br />
+          <a href="#category"><button type="button" class="btn btn-primary" >Register</button></a>
+        </div>
+
+        <div style="align-self:flex-end;width:50px;height:50px;justify-content:center;align-items: center;">
+          <a href="#about" style="color:inherit;"><h1 class="text-white arrow" style="">></h1></a>
+        </div>
+      
+        <div class="text-white header-logo d-none d-md-block d-lg-block">
+          <img src="images/logo/stacked-white.png" alt="NTURO LOGO" class="img-fluid" style="background:transparent;width:auto;height:400px">
+        </div>
+
+
+
+    </div>
+    
+
+
+  </div>
+</header>
+
+
+<div class="container sections " id="about">
+	<div class="row">
+		<div class="col-md-9 mx-auto">
+			<h1 style="text-align:center;">About NTURO</h1>
+			<p>
+			 	NTURO is a race for all multi-sports enthusiast to have a platform for competitive race for both the swim and run discipline. This race is a non-stop burst of swim-run-swim-run-swim-run without any breaks. With the added element of speed of transition during the race. 
+			 	<br /><br />
+				Participants will then not only enjoy the race but also to have exposure for newcomers venturing into this field of sport. This can be regarded as one of the platforms that will push the participants beyond their limits to see how far they can go.
+			</p>
+		</div>
+	</div>
+</div>
+<!--  text-white -->
+<div class="container sections" id="category" style="text-align:center;">
+  <div class="row">
+    <h1 class="col-md-12" style="color:black;text-align: center;">Categories</h1>
+  </div>
+	<div class="row">
+    <!-- bg-success -->
+		<div class="col-md-6  ">
+			<h3 >Team Category</h3>
+			<p>
+        Team Category is an invitational category that is open to University and Polytechnic representative of 5 Male and 5 Female.
+			</p>
+			<a href="teamRegistration.html" class=""><button class="btn btn-primary">Register</button></a>
+		</div>
+    <!-- bg-danger -->
+		<div class="col-md-6 ">
+			<h3 style="text-align:center;">Open Category</h3>
+			<p>
+				Open category is open for all to participate, regardless of age or gender.
+			</p>
+			<a href="#" class="btn btn-primary text-white disabled">Coming Soon</a>
+      <!-- Register -->
+		</div>
+	</div>
+</div>
+
+<div class="container sections" id="info" style="text-align:center;">
+	<div class="row">
+		<div class="col-md-12">
+			<h1>Race Information</h1>
+		</div>
+
+
+    <div class="table-responsive">
+            <table class="table col-md-8 mx-auto" style="text-align:left">
+          <tbody>
+            <tr>
+              <th>Date</th>
+              <td>16th March 2019</td>
+            </tr>
+            <tr>
+              <th>Time</th>
+              <td>0700hrs - 1500hrs</td>
+            </tr>
+            <tr>
+              <th>Location</th>
+              <td>NTU Sports and Recreation Center</td>
+            </tr>
+            <tr>
+              <th>Race Format</th>
+              <td>3 sets of ( 600m swim and 2km run )</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+	</div>
+     <div class="row">
+		
+			<div class="mx-auto col-md-10">
+        <h3>Swim Map</h3>
+        <p>The swim will commence first with 2 swimmers at the intervals of 10 seconds per wave completing a total of 300m which is 6 laps of 50m. For the first 300m swim, all participants are to start at the lane 1 and lane 2 position. Only after they are done with their first 2km run, they will enter from lane 3 to complete their second 300m swim and lastly the last set at lane 6. In total, every participant will complete a total of 900m swim and they will collect a coloured tag rubber band at the exit point after completing their swim. </p>
+  			<img src="images/RaceInfo/swim.png" alt="Swim Map" class="" style="width:100%;height:auto;">
+        <a href="images/RaceInfo/swim.png">Full Image</a>
+      </div>
+
+      <div class="mx-auto col-md-10">
+        <h3>Run Map</h3>
+        <p>Nanyang Green > Lien Ying Chow Dr > Nanyang Cres > Carpark Entrance > Nanyang Green. This is one loop of 2km, all participants are to complete 3 loops and to end their run at the finishing point.  </p>
+        <img src="images/RaceInfo/run.png" alt="Run Map" class="" style="width:100%;height:auto;">
+        <a href="images/RaceInfo/run.png">Full Image</a>
+      </div>
+
+		</div>
+	</div>
+</div>
+
+<div class="container sections" id="partners">
+    <div class="row">
+      <div class="col-md-12">
+       <h1 style="text-align:center;">Partners</h1>
+      </div>
+    </div>
+    <div class="row ">
+          <div class="col-6 mx-auto">
+            <img src="images/partners/tas.jpeg" style="margin-left: auto;margin-right: auto;height: auto;width:300px;max-width: 100%;display: block;">
+            <p style="text-align:center">NTURO is a race sanctioned by Triathlon Association of Singapore</p>
+          </div>
+    </div> 
+</div>
+<!-- <div class="container sections" id="sponsors">
+	 <div class="row">
+		  <div class="col-md-12">
+			 <h1 style="text-align:center;">Sponsors</h1>
+      </div>
+    </div>
+			<div class="row gold-sponsor">
+          <div class="col-6">
+            <img src="images/logo/horizontal.png">
+          </div>
+          <div class="col-6">
+            <img src="images/logo/horizontal.png">
+          </div>
+      </div> 
+      <div class="row silver-sponsor">
+          <div class="col-4">
+            <img src="images/logo/horizontal.png">
+          </div>
+          <div class="col-4">
+            <img src="images/logo/horizontal.png">
+          </div>
+          <div class="col-4">
+            <img src="images/logo/horizontal.png">
+          </div>
+      </div> 
+      <div class="row bronze-sponsor">
+          <div class="col-3">
+            <img src="images/logo/horizontal.png">
+          </div>
+          <div class="col-3">
+            <img src="images/logo/horizontal.png">
+          </div>
+          <div class="col-3">
+            <img src="images/logo/horizontal.png">
+          </div>
+          <div class="col-3">
+            <img src="images/logo/horizontal.png">
+          </div>
+      </div> 
+</div> -->
+
+<div class="container sections" id="faq">
+	<div class="row">
+		<div class="col-md-12">
+			<h1 style="text-align:center;">FAQ</h1>
+      <div>
+			<h3>
+				What is NTURO ?
+			</h3>
+			<p>It is adapted from Enduro race format that can be seen from super league triathlon races.</p>
+    </div>
+      <div>
+      <h3>
+        Where is the event held ?
+      </h3>
+      <p>NTU Sports and Recreation Centre, Map location available <a href="https://goo.gl/maps/JwnbpdSxHfk">here</a> </p>
+    </div>
+    <div>
+      <h3>
+        When is the event ?
+      </h3>
+      <p>16th March 2019 (Saturday)</p>
+    </div>
+    <!-- <div>
+      <h3>
+        What are the rules for the event ?
+      </h3>
+      <p>Survival of the fittest</p>
+    </div> -->
+    <div>
+      <h3>
+        I have a question that is not listed, how do i enquire ?
+      </h3>
+      <p>Email us your question with the email provided in the <a href="#contact"> contact us </a> section</p>
+    </div>
+		</div>
+	</div>
+
+</div>
+
+
+<div class="container sections" id="contact" style="text-align:center;">
+	<div class="row">
+		<div class="col-md-12">
+			<h1 >Contact</h1>
+			<p style="text-align:center;">
+				For any queries, contact us at <a href="mailto:nturo@ntuaquathlon.com">nturo@ntuaquathlon.com</a>
+			</p>
+		</div>
+	</div>
+</div>
+
+
+<footer class="py-5 bg-light">
+  <div class="container">
+  <div class="row">
+    <div class="col-3" style="overflow:hidden">
+    <div class="float-left">
+      <a class="navbar-brand" href="#">
+        <img src="images/logo/logo.png" alt="NTURO" class="img-fluid" style="max-height:24px;">
+      </a>
+    </div>
+  </div>
+    <small class="col-6 mx-auto text-muted align-self-center" style="text-align:center">Copyright &copy; <script>document.write(new Date().getFullYear())</script>, <a href="https://ntuaquathlon.com">NTU Aquathlon</a></small>
+
+
+  <div class="col-3" style="overflow:hidden">
+    <div class="float-right">
+      <a class="navbar-brand" href="https://www.facebook.com/NTURO" style="margin-right:0">
+        <img src="images/fb.svg" alt="FB Logo" style="max-height:24px;">
+      </a>
+    </div>
+  </div>
+
+  </div>
+  </div>
+</footer>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script>window.jQuery || document.write('<script src="https://getbootstrap.com/docs/4.2/assets/js/vendor/jquery-slim.min.js"><\/script>')</script><script src="https://getbootstrap.com/docs/4.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-zDnhMsjVZfS3hiP7oCBRmfjkQC4fzxVxFhBx8Hkz2aZX8gEvA/jsP3eXRCvzTofP" crossorigin="anonymous"></script><script>
+  </script>
+</body>
+
+</html>
+
+
+
+
+
 
