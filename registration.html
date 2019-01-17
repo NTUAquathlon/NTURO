@@ -1017,6 +1017,11 @@
 (function() {
   'use strict';
   window.addEventListener('load', function() {
+
+    $('#promo').on('input',function(e){
+      this.setCustomValidity('')
+    });
+
     var forms = document.getElementsByClassName('needs-validation');
     var validation = Array.prototype.filter.call(forms, function(form) {
       form.addEventListener('submit', function(event) {
@@ -1042,6 +1047,8 @@
                       console.log(responseObject)
                       responseObject.error.forEach(function(element){
                         document.getElementById(element.field).setCustomValidity('Check')
+
+
                       })
                     }else if(responseObject.StatusCode == 200){
                       alert("Successful registration, we will now redirect you to Xfers for payment" + "\n" + 
