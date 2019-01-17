@@ -73,7 +73,9 @@
     </a>
     <h2>Team Registration</h2>
   </div>
-  <form class="needs-validation" action="https://ntuaquathlon.azurewebsites.net/Register/Individual" method="POST" id="regForm" novalidate>
+  <form class="needs-validation" action="https://ntuaquathlon.azurewebsites.net/Register/Team" method="POST" id="regForm" novalidate>
+
+  <!-- <form class="needs-validation" action="http://localhost:3000/Register/Team" method="POST" id="regForm" novalidate> -->
 <div id="particulars" class="card">
   <div class="card-header">
     <h3>Personal Particulars</h3>
@@ -631,39 +633,7 @@
       Use the date picker (only on recent browsers). Otherwise, Enter in the following format YYYY-MM-DD
     </div>
   </div>
-  <!--
-  <div class="form-group">
-  <p class="fallbackLabel">Enter your Date of Birth:</p>
-    <div class="fallbackDatePicker">
-      <span>
-        <label for="day">Day:</label>
-        <select id="day" name="day">
-        </select>
-      </span>
-      <span>
-        <label for="month">Month:</label>
-        <select id="month" name="month">
-          <option selected>January</option>
-          <option>February</option>
-          <option>March</option>
-          <option>April</option>
-          <option>May</option>
-          <option>June</option>
-          <option>July</option>
-          <option>August</option>
-          <option>September</option>
-          <option>October</option>
-          <option>November</option>
-          <option>December</option>
-        </select>
-      </span>
-      <span>
-        <label for="year">Year:</label>
-        <select id="year" name="year">
-        </select>
-      </span>
-    </div>
-  </div> -->
+
   <div class="form-group">
     <legend class="col-form-label">Gender</legend>
     <div class="form-check">
@@ -1105,133 +1075,15 @@
 
 <script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
       <script>window.jQuery || document.write('<script src="/docs/4.2/assets/js/vendor/jquery-slim.min.js"><\/script>')</script><script src="https://getbootstrap.com/docs/4.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-zDnhMsjVZfS3hiP7oCBRmfjkQC4fzxVxFhBx8Hkz2aZX8gEvA/jsP3eXRCvzTofP" crossorigin="anonymous"></script>
-        <!-- <script src="https://getbootstrap.com/docs/4.2/examples/checkout/form-validation.js"></script> -->
 <script>
-  /**
-  var nativePicker = document.querySelector('.nativeDatePicker');
-var fallbackPicker = document.querySelector('.fallbackDatePicker');
-var fallbackLabel = document.querySelector('.fallbackLabel');
-
-var yearSelect = document.querySelector('#year');
-var monthSelect = document.querySelector('#month');
-var daySelect = document.querySelector('#day');
-
-// hide fallback initially
-fallbackPicker.style.display = 'none';
-fallbackLabel.style.display = 'none';
-
-// test whether a new date input falls back to a text input or not
-var test = document.createElement('input');
-test.type = 'date';
-
-// if it does, run the code inside the if() {} block
-if(test.type === 'text') {
-  // hide the native picker and show the fallback
-  nativePicker.style.display = 'none';
-  fallbackPicker.style.display = 'block';
-  fallbackLabel.style.display = 'block';
-
-  // populate the days and years dynamically
-  // (the months are always the same, therefore hardcoded)
-  populateDays(monthSelect.value);
-  populateYears();
-}
-
-function populateDays(month) {
-  // delete the current set of <option> elements out of the
-  // day <select>, ready for the next set to be injected
-  while(daySelect.firstChild){
-    daySelect.removeChild(daySelect.firstChild);
-  }
-
-  // Create variable to hold new number of days to inject
-  var dayNum;
-
-  // 31 or 30 days?
-  if(month === 'January' || month === 'March' || month === 'May' || month === 'July' || month === 'August' || month === 'October' || month === 'December') {
-    dayNum = 31;
-  } else if(month === 'April' || month === 'June' || month === 'September' || month === 'November') {
-    dayNum = 30;
-  } else {
-  // If month is February, calculate whether it is a leap year or not
-    var year = yearSelect.value;
-    var leap = (year % 4 === 0 && year % 100 !== 0) || year % 400 === 0;
-    dayNum = leap ? 29 : 28;
-  }
-
-  // inject the right number of new <option> elements into the day <select>
-  for(i = 1; i <= dayNum; i++) {
-    var option = document.createElement('option');
-    option.textContent = i;
-    daySelect.appendChild(option);
-  }
-
-  // if previous day has already been set, set daySelect's value
-  // to that day, to avoid the day jumping back to 1 when you
-  // change the year
-  if(previousDay) {
-    daySelect.value = previousDay;
-
-    // If the previous day was set to a high number, say 31, and then
-    // you chose a month with less total days in it (e.g. February),
-    // this part of the code ensures that the highest day available
-    // is selected, rather than showing a blank daySelect
-    if(daySelect.value === "") {
-      daySelect.value = previousDay - 1;
-    }
-
-    if(daySelect.value === "") {
-      daySelect.value = previousDay - 2;
-    }
-
-    if(daySelect.value === "") {
-      daySelect.value = previousDay - 3;
-    }
-  }
-}
-
-function populateYears() {
-  // get this year as a number
-  var date = new Date();
-  var year = date.getFullYear();
-
-  // Make this year, and the 100 years before it available in the year <select>
-  for(var i = 0; i <= 100; i++) {
-    var option = document.createElement('option');
-    option.textContent = year-i;
-    yearSelect.appendChild(option);
-  }
-}
-
-// when the month or year <select> values are changed, rerun populateDays()
-// in case the change affected the number of available days
-yearSelect.onchange = function() {
-  populateDays(monthSelect.value);
-}
-
-monthSelect.onchange = function() {
-  populateDays(monthSelect.value);
-}
-
-//preserve day selection
-var previousDay;
-
-// update what day has been set to previously
-// see end of populateDays() for usage
-daySelect.onchange = function() {
-  previousDay = daySelect.value;
-}
-**/
+ 
 </script>
 
         <script>
-// Example starter JavaScript for disabling form submissions if there are invalid fields
 (function() {
   'use strict';
   window.addEventListener('load', function() {
-    // Fetch all the forms we want to apply custom Bootstrap validation styles to
     var forms = document.getElementsByClassName('needs-validation');
-    // Loop over them and prevent submission
     var validation = Array.prototype.filter.call(forms, function(form) {
       form.addEventListener('submit', function(event) {
         event.preventDefault();
@@ -1252,9 +1104,8 @@ daySelect.onchange = function() {
             $.ajax({ 
                  url   : formObject.attr('action'),
                  type  : formObject.attr('method'),
-                 data  : formObject.serialize(), // data to be submitted
+                 data  : formObject.serialize(), 
                  success: function(response){
-                    // alert(typeof response); // do what you like with the response
                     var responseObject = JSON.parse(response);
                     if(responseObject.StatusCode == 404){
                       //error
