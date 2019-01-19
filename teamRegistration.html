@@ -972,10 +972,14 @@
  
 </script>
 
-        <script>
+<script>
 (function() {
   'use strict';
   window.addEventListener('load', function() {
+
+    $('#promo').on('input',function(e){
+      this.setCustomValidity('')
+    });
 
     var forms = document.getElementsByClassName('needs-validation');
     var validation = Array.prototype.filter.call(forms, function(form) {
@@ -995,7 +999,7 @@
 
 
 
-        if (form.checkValidity() === true && emailValid) {
+        // if (form.checkValidity() === true && emailValid) {
 
             var formObject = $($(this)[0]);
             $.ajax({ 
@@ -1008,12 +1012,8 @@
                       console.log(responseObject)
                       responseObject.error.forEach(function(element){
                         var item = document.getElementsByName(element.field)[0];
--                        item.setCustomValidity('Check')
--                        $(item).on('input',function(e){
--                          e.target.setCustomValidity('')
--                        });
+-                       item.setCustomValidity('Check')
 -                        alert('Check your inputs highlighted in Red');
-                        document.getElementById(element.field).setCustomValidity('Check')
                       })
                       
 
@@ -1028,7 +1028,7 @@
 
                  }
             });
-        }
+        // }
 
         
 
