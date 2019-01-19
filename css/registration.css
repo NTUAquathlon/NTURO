@@ -1,0 +1,33 @@
+.bd-placeholder-img {
+  font-size: 1.125rem;
+  text-anchor: middle;
+}
+
+@media (min-width: 768px) {
+  .bd-placeholder-img-lg {
+    font-size: 3.5rem;
+  }
+}
+
+.card{
+  margin-bottom:50px;
+}
+
+#navbar {
+  position:fixed;
+  left:20px;
+  top:40%;
+
+}
+
+#navbar ul li{
+  list-style: none;
+}
+
+#navbar ul li{
+  list-style: none;
+}
+
+form{
+  margin-bottom:50px;
+}

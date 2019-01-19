@@ -8,71 +8,17 @@
     <meta name="author" content="NTU Aquathlon">
     <meta name="generator" content="Jekyll v3.8.5">
     <title>NTURO Registration - Team</title>
-
-    <!-- Bootstrap core CSS -->
-<link href="https://getbootstrap.com/docs/4.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-
-
-    <style>
-      .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-      }
-
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
-        }
-      }
-
-      .card{
-        margin-bottom:50px;
-      }
-
-      #navbar {
-        position:fixed;
-        left:20px;
-        top:40%;
-
-      }
-
-      #navbar ul li{
-        list-style: none;
-      }
-
-      #navbar ul li{
-        list-style: none;
-      }
-
-      form{
-        margin-bottom:50px;
-      }
-    </style>
+    <link href="https://getbootstrap.com/docs/4.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link href="css/registration.css" rel="stylesheet">
   </head>
   <body>
-   <!-- 
-<nav>
-      <ul class="nav flex-column d-none md-block lg-block d-xl-block" id="navbar">
-      <li class="nav-item"><a class="nav-link" href="#particulars">Personal Particulars</a></li>
-            <li class="nav-item"><a class="nav-link" href="#race">Race Details</a></li>
-            <li class="nav-item"><a class="nav-link" href="#apparel">Apparel Size</a></li>
-            <li class="nav-item"><a class="nav-link" href="#medical">Medical Declaration</a></li>
-            <li class="nav-item"><a class="nav-link" href="#emergency">Emergency Contact</a></li>
-            <li class="nav-item"><a class="nav-link" href="#tos">Rules and Regulations</a></li>
-    </ul>
-</nav>
--->
-
-
-
-    <div class="container">
-  <div class="py-5 text-center">
-    
-    <a href="/">
-      <img class="d-block mx-auto mb-4" src="images/logo/logo.png" alt="NTURO" class="img-fluid" width="72" height="72">
-    </a>
-    <h2>Team Registration</h2>
-  </div>
+  <div class="container">
+    <div class="py-5 text-center">
+      <a href="/">
+        <img class="d-block mx-auto mb-4" src="images/logo/logo.png" alt="NTURO" class="img-fluid" width="72" height="72">
+      </a>
+      <h2>Team Registration</h2>
+    </div>
   <form class="needs-validation" action="https://ntuaquathlon.azurewebsites.net/Register/Team" method="POST" id="regForm" novalidate>
 
   <!-- <form class="needs-validation" action="http://localhost:3000/Register/Team" method="POST" id="regForm" novalidate> -->
@@ -85,7 +31,7 @@
     <label for="name">Full Name</label>
     <input type="text" class="form-control needs-validation" id="name" name="name" required>
     <div class="invalid-feedback">
-      Give me a name
+      Please enter your name
     </div>
   </div>
 
@@ -93,14 +39,14 @@
     <label for="email">Email</label>
     <input type="email"  name="email" class="form-control" id="email" required>
     <div class="invalid-feedback">
-      Need your email
+      Please enter a valid email
     </div>
   </div>
   <div class="form-group">
     <label for="cfmEmail">Confirm email</label>
     <input type="email" class="form-control" id="cfmEmail" required>
     <div class="invalid-feedback">
-      Double check your input
+      Double check that you have entered the same email as you have entered previously
     </div>
   </div>
   <div class="form-group">
@@ -359,7 +305,7 @@
       <option value="ZWE">Zimbabwe</option>
     </select>
     <div class="invalid-feedback">
-      Are you stateless ?
+      Please select your nationality
     </div>
   </div>
   <div class="form-group">
@@ -616,21 +562,21 @@
       <option value="ZWE">Zimbabwe</option>
     </select>
     <div class="invalid-feedback">
-      Where you ?
+      Please select your country of residence
     </div>
   </div>
   <div class="form-group">
-    <label for="email">NRIC / Passport No.</label>
+    <label for="email">NRIC/Passport No.</label>
     <input type="text"  name="nric" class="form-control" id="id" required>
     <div class="invalid-feedback">
-      If you don't know we can't help you
+      Please enter your identification
     </div>
   </div>
   <div class="form-group nativeDatePicker">
     <label for="DOB">Date Of Birth</label>
     <input type="date" class="form-control" name="dob" id="dob" pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}" required>
     <div class="invalid-feedback">
-      Use the date picker (only on recent browsers). Otherwise, Enter in the following format YYYY-MM-DD
+      Select your birthday using the date picker (only on recent browsers). Otherwise, Enter it in the following format YYYY-MM-DD
     </div>
   </div>
 
@@ -655,7 +601,7 @@
       </label>
     </div>
     <div class="invalid-feedback">
-      What are you ?
+      Please select your gender
     </div>
   </div>
 
@@ -663,7 +609,7 @@
     <label for="phone">Mobile Number</label>
     <input type="tel" class="form-control" pattern="[0-9]{8,15}" id="phone"  name="phone" required>
     <div class="invalid-feedback">
-      Text you maybe ?
+      Please enter your mobile number and ensure that the number is valid
     </div>
   </div>
 </div>
@@ -674,77 +620,12 @@
     <h3>Race Details</h3>
   </div>
   <div class="card-body">
+    
     <div class="form-group">
-      <legend class="col-form-label">Which School Team ?</legend>
-      <div class="form-check">
-        <input class="form-check-input" type="radio" name="team" id="NUS" value="NUS" required>
-        <label class="form-check-label" for="NUS" >
-          National University of Singapore (NUS)
-        </label>
-      </div>
-      <div class="form-check">
-        <input class="form-check-input" type="radio" name="team" id="SMU" value="SMU" required>
-        <label class="form-check-label" for="SMU" >
-          Singapore Management University (SMU)
-        </label>
-      </div>
-      <div class="form-check">
-        <input class="form-check-input" type="radio" name="team" id="NTU" value="NTU" required>
-        <label class="form-check-label" for="NTU" >
-          Nanyang Technological University (NTU)
-        </label>
-      </div>
-      <div class="form-check">
-        <input class="form-check-input" type="radio" name="team" id="SIM" value="SIM" required>
-        <label class="form-check-label" for="SIM" >
-          Singapore Institute of Management (SIM)
-        </label>
-      </div>
-      <div class="form-check">
-        <input class="form-check-input" type="radio" name="team" id="SUSS" value="SUSS" required>
-        <label class="form-check-label" for="SUSS" >
-          Singapore University of Social Sciences (SUSS)
-        </label>
-      </div>
-      <div class="form-check">
-        <input class="form-check-input" type="radio" name="team" id="SUTD" value="SUTD" required>
-        <label class="form-check-label" for="SUTD" >
-          Singapore University of Technology and Design (SUTD)
-        </label>
-      </div>
-      <div class="form-check">
-        <input class="form-check-input" type="radio" name="team" id="SP" value="SP" required>
-        <label class="form-check-label" for="SP" >
-          Singapore Polytechnic (SP)
-        </label>
-      </div>
-      <div class="form-check">
-        <input class="form-check-input" type="radio" name="team" id="NP" value="NP" required>
-        <label class="form-check-label" for="NP" >
-          Ngee Ann Polytechnic (NP)
-        </label>
-      </div>
-      <div class="form-check">
-        <input class="form-check-input" type="radio" name="team" id="NYP" value="NYP" required>
-        <label class="form-check-label" for="NYP" >
-          Nanyang Polytechnic (NYP)
-        </label>
-      </div>
-      <div class="form-check">
-        <input class="form-check-input" type="radio" name="team" id="RP" value="RP" required>
-        <label class="form-check-label" for="SUTD" >
-          Republic Polytechnic (RP)
-        </label>
-      </div>
-      <div class="form-check">
-        <input class="form-check-input" type="radio" name="team" id="TP" value="TP" required>
-        <label class="form-check-label" for="TP" >
-          Temasek Polytechnic (TP)
-        </label>
-      </div>
-      
+      <label for="team">Team Name</label>
+      <input type="text" class="form-control" id="team"  name="team" required>
       <div class="invalid-feedback">
-        Where you come from
+        Please enter your team name
       </div>
     </div>
 
@@ -755,7 +636,7 @@
         Your bib name can have a maximum of 12 characters with no special characters
       </small>
       <div class="invalid-feedback">
-        Please check the fine print, 12 char + no special char
+        Your bib name is required and can have a maximum of 12 characters with No special characters
       </div>
     </div>
 
@@ -766,7 +647,7 @@
         Your cert name can have a maximum of 20 characters with no special characters
       </small>
       <div class="invalid-feedback">
-        Please check the fine print, 20 char + no special char
+        Your cert name is required and have a maximum of 20 characters with No special characters
       </div>
     </div>
 
@@ -827,7 +708,7 @@
         </label>
       </div>
       <div class="invalid-feedback">
-        Need your timing
+        Please select your swim time
       </div>
     </div>
   </div>
@@ -877,7 +758,7 @@
         </label>
       </div>
       <div class="invalid-feedback">
-        Need your sizing
+        Please select your sizing for your Singlet
       </div>
     </div>
 
@@ -920,7 +801,7 @@
         </label>
       </div>
       <div class="invalid-feedback">
-        Need your sizing
+        Please select your sizing for your finisher T-Shirt
       </div>
     </div>
   </div>
@@ -932,16 +813,15 @@
   <h3>Medical Declaration</h3></div>
   <div class="card-body">
   <div class="form-group">
-    <label for="Allergies">Allergies ?</label>
+    <label for="Allergies">Allergies</label>
     <input type="text"  name="allergy" class="form-control" id="Allergies" placeholder="">
-
   </div>
   <div class="form-group">
-    <label for="Medical">Known medical condition ?</label>
+    <label for="Medical">Known medical condition</label>
     <input type="text"  name="medical" class="form-control" id="medicalCondition">
   </div>
   <div class="form-group">
-    <label for="blood">Blood Type ?</label>
+    <label for="blood">Blood Group</label>
     <select id="blood" class="form-control" name="blood" required>
       <option value="A+">A+</option>
       <option value="A-">A-</option>
@@ -953,7 +833,7 @@
       <option value="O-">O-</option>
     </select>
     <div class="invalid-feedback">
-      You human ?
+      Please select your blood group
     </div>
   </div>
 </div>
@@ -965,24 +845,24 @@
   </div>
   <div class="card-body">
   <div class="form-group">
-    <label for="NOK">Name of Emergency contact</label>
+    <label for="NOK">Name of Emergency Contact</label>
     <input type="text"  name="nok" class="form-control" id="NOK" placeholder="" required>
     <div class="invalid-feedback">
-      In case
+      Please enter the name of your emergency contact
     </div>
   </div>
   <div class="form-group">
     <label for="NOKRelation">Relationship with Emergency Contact</label>
     <input type="text"  name="nokrel" class="form-control" id="NOKRelation" required>
     <div class="invalid-feedback">
-        who dat ?
+      Please enter your relation with your emergency contact
     </div>
   </div>
   <div class="form-group">
     <label for="NOKContact">Contact number of Emergency Contact</label>
     <input type="tel"  name="nokcontact" class="form-control" id="NOKContact" placeholder=""  pattern="[0-9]{8,15}" required>
     <div class="invalid-feedback">
-        how to contact ?
+      Please enter your emergency contact's contact number and ensure that it's numbers only
     </div>
   </div>
 </div>
@@ -1001,7 +881,7 @@
           Yes
         </label>
         <div class="invalid-feedback">
-        Press the circle
+        We need you to agree on the rules to participate in NTURO
       </div>
       </div>
       
@@ -1014,7 +894,7 @@
           Yes
         </label>
         <div class="invalid-feedback">
-          Press the circle
+          We need your consent on the indemnity to continue
         </div>
       </div>
       
@@ -1022,7 +902,20 @@
   </div>
 </div>
 
-<input type="hidden" name="promo" value="NTURO2019TEAM"/>
+<div id="promotion" class="card">
+  <div class="card-header">
+    <h3>Payment</h3>
+  </div>
+  <div class="card-body">
+    <div class="form-group">
+      <label for="promo">Promo Code</label>
+      <input type="text" class="form-control needs-validation" name="promo" id="promo" value=""/>
+      <div class="invalid-feedback">
+        Invalid promo code, check if the promo code is expired or if it's for team registration
+      </div>
+    </div>
+  </div>
+</div>
 
 <div class="row justify-content-end">
 <div class="col-12">
@@ -1083,6 +976,11 @@
 (function() {
   'use strict';
   window.addEventListener('load', function() {
+
+    $('#promo').on('input',function(e){
+      this.setCustomValidity('')
+    });
+
     var forms = document.getElementsByClassName('needs-validation');
     var validation = Array.prototype.filter.call(forms, function(form) {
       form.addEventListener('submit', function(event) {
@@ -1100,7 +998,7 @@
         }
 
         if (form.checkValidity() === true && emailValid) {
-            formObject = $($(this)[0]);
+            var formObject = $($(this)[0]);
             $.ajax({ 
                  url   : formObject.attr('action'),
                  type  : formObject.attr('method'),
@@ -1108,7 +1006,6 @@
                  success: function(response){
                     var responseObject = JSON.parse(response);
                     if(responseObject.StatusCode == 404){
-                      //error
                       console.log(responseObject)
                       responseObject.error.forEach(function(element){
                         document.getElementById(element.field).setCustomValidity('Check')
@@ -1133,10 +1030,10 @@
     });
   }, false);
 })();
-var formObject;
+
 </script>
 
-      </body>
+</body>
 
 
 </html>
