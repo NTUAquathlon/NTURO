@@ -620,7 +620,7 @@
   <div class="card-body">
     <div class="form-group">
       <label for="bib">Name on Bib</label>
-      <input type="text"  name="bib" class="form-control" id="bib" aria-describedby="bibHelpText" pattern="\w[a-zA-Z0-9 ]{0,12}\b$" required>
+      <input type="text"  name="bib" class="form-control" id="bib" aria-describedby="bibHelpText" pattern="[a-zA-Z0-9 ]{0,12}" required>
       <small id="bibHelpText" class="form-text text-muted">
         Your bib name can have a maximum of 12 characters with no special characters
       </small>
@@ -631,7 +631,7 @@
 
     <div class="form-group">
       <label for="certName">Name on e-Certificate</label>
-      <input type="text" class="form-control" id="certName" aria-describedby="certNameHelpText"  name="ecert" pattern="\w[a-zA-Z0-9 ]{0,20}\b$" required>
+      <input type="text" class="form-control" id="certName" aria-describedby="certNameHelpText"  name="ecert" pattern="[a-zA-Z0-9 ]{0,20}" required>
       <small id="certNameHelpText" class="form-text text-muted">
         Your cert name can have a maximum of 20 characters with no special characters
       </small>
@@ -661,7 +661,7 @@
         </label>
       </div>
       <div class="form-check">
-        <input class="form-check-input" type="radio" name="swim" id="10Min" value="1O">
+        <input class="form-check-input" type="radio" name="swim" id="10Min" value="10">
         <label class="form-check-label" for="10Min">
           9 to 10 minutes
         </label>
@@ -967,9 +967,7 @@
   'use strict';
   window.addEventListener('load', function() {
 
-    $('#promo').on('input',function(e){
-      this.setCustomValidity('')
-    });
+    
 
     var forms = document.getElementsByClassName('needs-validation');
     var validation = Array.prototype.filter.call(forms, function(form) {
@@ -995,9 +993,12 @@
                     if(responseObject.StatusCode == 404){
                       console.log(responseObject)
                       responseObject.error.forEach(function(element){
-                        document.getElementById(element.field).setCustomValidity('Check')
-
-
+                        var item = document.getElementsByName(element.field)[0];
+                        item.setCustomValidity('Check')
+                        $(item).on('input',function(e){
+                          e.target.setCustomValidity('')
+                        });
+                        alert('Check your inputs highlighted in Red');
                       })
                     }else if(responseObject.StatusCode == 200){
                       alert("Successful registration, we will now redirect you to Xfers for payment" + "\n" + 
