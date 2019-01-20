@@ -908,11 +908,34 @@
   </div>
   <div class="card-body">
     <div class="form-group">
-      <label for="promo">Promo Code</label>
-      <input type="text" class="form-control needs-validation" name="promo" id="promo" value=""/>
-      <div class="invalid-feedback">
-        Invalid promo code, check if the promo code is expired or if it's for team registration
+      <legend class="col-form-label">Discount</legend>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="promo" id="PNone" value="" selected required>
+        <label class="form-check-label" for="PNone">
+          None
+        </label>
       </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="promo" id="PStudent" value="NTUROSTUDENTTEAM" required>
+        <label class="form-check-label" for="PStudent">
+          Student Discount
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="promo" id="PCodeR" required>
+        <label class="form-check-label" for="PCodeR" id="PCodeL">
+          Promo Code
+        </label>
+        <br />
+        <input type="text" name="promo" class="form-control" id="PCode" disabled/>
+      </div>
+      
+      <div class="invalid-feedback">
+        Please select your preference
+      </div>
+    </div>
+    <button id="checkPromo" type="button" class="btn btn-primary" style="float:right">Check Promo</button>
+    <div id="promoResult" style="white-space: pre-line;padding-top:10px">
     </div>
   </div>
 </div>
@@ -977,6 +1000,48 @@
   'use strict';
   window.addEventListener('load', function() {
 
+    $('input[type=radio][name=promo]').change(function() {
+        $("#promoResult").text("")
+        if (this.value != '' && this.value != 'NTUROSTUDENTTEAM') {
+            //$("#PCode").value = "";
+          $("#PCode")[0].disabled = false;
+
+        }else{
+          $("#PCode")[0].value = "";
+          $("#PCode")[0].disabled = true;
+        }
+    });
+
+    $('#checkPromo').click(function(e){
+      var promoCode = '';
+      var radioButtons = $('input[type=radio][name=promo]');
+      for(var i = 0; i< radioButtons.length;i++){
+
+        if(radioButtons[i].checked){
+          if(i == 2){
+            promoCode = $("#PCode")[0].value;
+          }else{
+            promoCode = radioButtons[i].value;
+          }
+        }
+      }
+      if(promoCode != ''){
+        $.getJSON('https://ntuaquathlon.azurewebsites.net/promo?code=' + promoCode.toUpperCase(),function(data){
+
+          if(data.StatusCode == 404){
+            $("#promoResult").text("Promo Code not found");
+          }
+          if(data.Type == 'Team'){
+          
+            $("#promoResult").text("Promo Code: " + data.Code + " \nDiscount of " + Math.round((45/data.Price * 100) - 100) + "%, Current Price is " + data.Price);
+          }else{
+            $("#promoResult").text("Promo Code: " + data.Code + " is for Individual Category.");
+          }
+          
+        })
+      }
+    });
+
     $('#promo').on('input',function(e){
       this.setCustomValidity('')
     });
@@ -999,13 +1064,13 @@
 
 
 
-        // if (form.checkValidity() === true && emailValid) {
+        if (form.checkValidity() === true && emailValid) {
 
             var formObject = $($(this)[0]);
             $.ajax({ 
                  url   : formObject.attr('action'),
                  type  : formObject.attr('method'),
-                 data  : formObject.serialize(), 
+                 data  : formObject.serialize().replace('promo=on&',""), 
                  success: function(response){
                     var responseObject = JSON.parse(response);
                     if(responseObject.StatusCode == 404){
@@ -1028,7 +1093,7 @@
 
                  }
             });
-        // }
+        }
 
         
 
