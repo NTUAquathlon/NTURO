@@ -60,9 +60,12 @@
 
 <header>
   
-  <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop" class="d-none d-md-block d-lg-block">
-    <!-- <source src="video/running.mp4" type="video/mp4"> -->
-  </video>
+ <!--  <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop" class="d-none d-md-block d-lg-block">
+    <source src="video/running.mp4" type="video/mp4">
+  </video> -->
+  <div id="youtube-player">
+  </div>
+
   <div class="overlay d-none d-md-block d-lg-block" ></div>
   <div class="mobile-overlay d-md-none d-lg-none" ></div>
   <div class="container h-100 fill">
@@ -311,7 +314,13 @@
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script>window.jQuery || document.write('<script src="https://getbootstrap.com/docs/4.2/assets/js/vendor/jquery-slim.min.js"><\/script>')</script><script src="https://getbootstrap.com/docs/4.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-zDnhMsjVZfS3hiP7oCBRmfjkQC4fzxVxFhBx8Hkz2aZX8gEvA/jsP3eXRCvzTofP" crossorigin="anonymous"></script><script>
   </script>
-
+  <script>
+    window.onload = function(){
+      if($('.d-md-block').is(':visible')){
+        $("#youtube-player").html('<iframe src="https://www.youtube.com/embed/mQcoLu7hVOY?controls=0&showinfo=0&rel=0&autoplay=1&loop=1&playlist=mQcoLu7hVOY&vq=hd720" frameborder="0" allowfullscreen class="d-none d-md-block d-lg-block"></iframe>');
+      }
+    }
+  </script>
 
 
 </body>
