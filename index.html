@@ -8,7 +8,8 @@
     <meta name="author" content="NTU Aquathlon">
     <title>NTURO 2019</title>
     <link rel=icon href=images/favicon.png>
-    <link href="https://getbootstrap.com/docs/4.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
     <link href="css/custom.css" rel="stylesheet">
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-72214160-5"></script>
 	<script>
@@ -112,20 +113,20 @@
     <h1 class="col-md-12" style="color:black;text-align: center;">Categories</h1>
   </div>
 	<div class="row">
-		<!--<div class="col-md-6  ">
-			<h3 >Team Category</h3>
-			<p style="text-align:center;">
-        Team Category is open to all teams in groups of 4, their total time will be matched with other teams to determine the ultimate winner
+		<div class="col-md-6  ">
+			<h3 >Relay Category</h3>
+			<p style="text-align:left;">
+        Team Relay Category is open to teams in groups of 3. Each member in the relay team will do 1 set of 300m swim and 2km run.
         <br /><br />
-         <b style="text-align:center;">$45</b> 
+         <!-- <b style="text-align:center;">$35</b>  -->
 			</p>
-			<a href="teamRegistration.html" class=""><button class="btn btn-secondary" disabled>Register</button></a>
-       <a href="#" class="btn btn-primary text-white disabled">Coming Soon</a> 
-		</div> -->
-		<div class="col-md-6 mx-auto">
+			<a href="teamRegistration.html" class=""><button class="btn btn-primary">Register</button></a>
+       <!-- <a href="#" class="btn btn-primary text-white disabled">Coming Soon</a>  -->
+		</div> 
+		<div class="col-md-6">
 			<h3 style="text-align:center;">Individual Category</h3>
-			<p style="text-align:center;">
-				Individual Category is open for all to participate, regardless of age or gender.
+			<p style="text-align:left;">
+			   Individual Category involves 3 sets of (300m swim and 2km run)
         <br />
         <br />
         <br />    
@@ -138,27 +139,31 @@
     <h3>Pricing</h3>
         <table class="table col-md-8 mx-auto" style="text-align:left">
           <tbody>
-            <!--<tr>
-              <th>Team Category</th>
-              <td>
-                  Public - $45
-                  <br />
-                  Student - $35
-              </td>
-
-            </tr>-->
             <tr>
               <th>Individual Category</th>
               <td>
-                Public - $55
-                <br />
-                Student - $45
+                <b>$55/pax</b>
               </td>
-
+            </tr>
+            <tr>
+              <td style="text-align:left;">
+              Entitlements: NTURO's Singlet, <b>Finisher T-Shirt</b>, Swim Cap and Drawstring bag
+              </td>
+            </tr>
+            <tr>
+              <th>Relay Category</th>
+              <td>
+                  <b>$35/pax</b>
+              </td>
+            </tr>
+            <tr>
+              <td style="text-align:left;">
+              Entitlements: NTURO's Singlet, Swim Cap and Drawstring bag
               </td>
             </tr>
           </tbody>
           </table>
+          <p style="text-align:center;">*Students gets <b>$10</b> Off in All Categories</p>
         </div>
 	</div>
 </div>
@@ -175,19 +180,25 @@
           <tbody>
             <tr>
               <th>Date</th>
-              <td>16th March 2019</td>
+              <td colspan="2">16th March 2019</td>
             </tr>
             <tr>
               <th>Time</th>
-              <td>0700hrs - 1500hrs</td>
+              <td colspan="2">0700hrs - 1500hrs</td>
             </tr>
             <tr>
               <th>Location</th>
-              <td><a href="https://goo.gl/maps/JwnbpdSxHfk" target="_blank">NTU Sports and Recreation Center</a></td>
+              <td colspan="2"><a href="https://goo.gl/maps/JwnbpdSxHfk" target="_blank">NTU Sports and Recreation Center</a></td>
             </tr>
             <tr>
               <th>Race Format</th>
+              <td>Individual Category</td>
               <td>3 sets of ( 300m swim and 2km run )</td>
+            </tr>
+            <tr>
+              <th></th>
+              <td>Relay Category</td>
+              <td>( 300m swim and 2km run ) per member</td>
             </tr>
             </tbody>
         </table>
@@ -200,7 +211,13 @@
         <div class="row">
           <div class="col-12">
           <h3 style="text-align:center">Swim Map</h3>
-          <p>This is an overview of the swim route for each set. Each set consists of 300m swim, which is 6 laps of 50m. In total, all participants are to complete a total of 900m swim. </p>
+          <p>
+            This is an overview of the swim route for each set. Each set consists of 300m swim, which is 6 laps of 50m. 
+            <br />
+            <b>Individual Category</b> participants are to complete a total of 900m swim. 
+            <br />
+            <b>Relay Category</b> participants are to each complete a 300m swim. 
+          </p>
     			<img src="images/RaceInfo/swim.jpeg" alt="Swim Map" class="" style="width:100%;height:auto;">
           <a href="images/RaceInfo/swim.jpeg" target="_blank">Full Image</a>
           </div>
@@ -239,7 +256,12 @@
 
       <div class="mx-auto col-md-10">
         <h3>Run Map</h3>
-        <p>This is an overview of a 2km run route transiting from a 300m swim for each set. All participants are to complete 3 sets of this run route and to end their run at the Finishing Point.</p>
+        <p>This is an overview of a 2km run route transiting from a 300m swim for each set. 
+          <br />
+        <b>Individual Category</b> participants are to complete 3 sets of this run route and to end their run at the Finishing Point.
+        <br />
+        <b>Relay Category</b> participants are to each complete 1 sets of this run route and to end their run at the Transitioning Point.
+      </p>
         <img src="images/RaceInfo/run.png" alt="Run Map" class="" style="width:100%;height:auto;">
         <a href="images/RaceInfo/run.png" target="_blank">Full Image</a>
       </div>
@@ -310,11 +332,11 @@
 			<h3>
 				What is NTURO ?
 			</h3>
-			<p>It is an adaptation of Enduro race format that can be seen from Super League Triathlon races. It is a race that is being sanctioned by Triathlon Association of Singapore</p>
+			<p>It is an adaptation of Enduro race format that can be seen from Super League Triathlon races, the race is sanctioned by Triathlon Association of Singapore</p>
     </div>
     <div>
       <h3>
-        How do i get to the race venue ?
+        How do I get to the race venue ?
       </h3>
       <p>
       Public Bus Service 179 is available at Boon Lay Bus Interchange. Alight opposite Hall of Residence 6 and walk to Sports and Recreation Centre (SRC)
@@ -335,14 +357,23 @@
       </h3>
       <p>We follow conventional triathlon race rules, Click <a href="rules.html" target="_blank">here</a> to view</p>
     </div>
+   <div>
+      <h3>
+        Why is the Team Category race format changed to Relay Category ?
+      </h3>
+      <p>
+        Due to popular demand, the NTURO team changed the race format so as to allow everyone with different skill levels to participate in the race.
+      </p>
+    </div>
     <div>
       <h3>
-        What's the evaluation criteria for Team Category ?
+        What is the evaluation criteria for Relay Category ?
       </h3>
-      <p>Each team of 4 participants will do 3 sets of (300m swim + 2km run). 
+      <p>
+        A team of 3 participants will each do 1 sets of (300m swim + 2km run). 
         <br />
         <br />
-        The total time taken of team of 4 participants will be summed up and ranked accordingly
+        Upon finishing the 2km run for the first member, he/she will have to tap on the second member so that the second member can start their segment, vice-versa for the second and third member.
       </p>
     </div>
     <!-- <div>
@@ -353,13 +384,13 @@
     </div>-->
     <div>
       <h3>
-        How do i volunteer for NTURO ?
+        How do I volunteer for NTURO ?
       </h3>
       <p>Fill up <a href="https://docs.google.com/forms/d/e/1FAIpQLSeTTfsS3d3CrKVEVgtcnhO1opMoCAt_xcFvZc-w_MV9zPmoMw/viewform" target="_blank">this form</a> and we'll contact you soon</p>
     </div>
     <div>
       <h3>
-        I have a question that is not listed, how do i enquire ?
+        I have a question that is not listed, how do I enquire ?
       </h3>
       <p>Email us your question with the email provided in the <a href="#contact">contact section</a></p>
     </div>

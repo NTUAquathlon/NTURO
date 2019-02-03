@@ -7,8 +7,8 @@
     <meta name="description" content="NTURO Team Registration">
     <meta name="author" content="NTU Aquathlon">
     <meta name="generator" content="Jekyll v3.8.5">
-    <title>NTURO Registration - Team</title>
-    <link href="https://getbootstrap.com/docs/4.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <title>NTURO Registration - Relay</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <link href="css/registration.css" rel="stylesheet">
   </head>
   <body>
@@ -17,7 +17,7 @@
       <a href="/">
         <img class="d-block mx-auto mb-4" src="images/logo/logo.png" alt="NTURO" class="img-fluid" width="72" height="72">
       </a>
-      <h2>Team Registration</h2>
+      <h2>Team Relay Registration</h2>
     </div>
   <form class="needs-validation" action="https://ntuaquathlon.azurewebsites.net/Register/Team" method="POST" id="regForm" novalidate>
 
@@ -622,7 +622,7 @@
   <div class="card-body">
     
     <div class="form-group">
-      <label for="team">Team Name</label>
+      <label for="team">Relay Team Name</label>
       <input type="text" class="form-control" id="team"  name="team" required>
       <div class="invalid-feedback">
         Please enter your team name
@@ -654,9 +654,21 @@
     <div class="form-group">
       <legend class="col-form-label">Swim timing for 500 meters</legend>
       <div class="form-check">
-        <input class="form-check-input" type="radio" name="swim" id="7Min" value="7" required>
+        <input class="form-check-input" type="radio" name="swim" id="5Min" value="5" required>
+        <label class="form-check-label" for="5Min" >
+          Less than 5 mins
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="swim" id="6Min" value="6">
+        <label class="form-check-label" for="6Min" >
+          5 to 6 minutes
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="swim" id="7Min" value="7">
         <label class="form-check-label" for="7Min" >
-          Less than 7 mins
+          6 to 7 minutes
         </label>
       </div>
       <div class="form-check">
@@ -823,130 +835,8 @@
         Please select your sizing for your Singlet
       </div>
     </div>
-    <div class="row">
-    <div class="col-md-2">
-      <img src="images/RaceInfo/drifit.png" style="width:100%;margin-top:20px"/>
-    </div>
-    <div class="table-responsive col-md-10">
-    <table class="table ">
-      <thead>
-        <tr>
-          <th>Round Neck (Inches)</th>
-          <th>2XS</th>
-          <th>XS</th>
-          <th>S</th>
-          <th>M</th>
-          <th>L</th>
-          <th>XL</th>
-          <th>2XL</th>
-          <th>3XL</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <th>Body Length (B)</th>
-          <td>24</td>
-          <td>25</td>
-          <td>26</td>
-          <td>27</td>
-          <td>28</td>
-          <td>29</td>
-          <td>30</td>
-          <td>31</td>
-        </tr>
-        <tr>
-          <th>Shoulder</th>
-          <td>15</td>
-          <td>16</td>
-          <td>17</td>
-          <td>18</td>
-          <td>19</td>
-          <td>20</td>
-          <td>21</td>
-          <td>22</td>
-        </tr>
-        <tr>
-          <th>Sleeve</th>
-          <td>7</td>
-          <td>7.5</td>
-          <td>8</td>
-          <td>8.5</td>
-          <td>9</td>
-          <td>9.5</td>
-          <td>10</td>
-          <td>10.5</td>
-        </tr>
-        <tr>
-          <th>Chest (A)</th>
-          <td>17</td>
-          <td>18</td>
-          <td>19</td>
-          <td>20</td>
-          <td>21</td>
-          <td>22</td>
-          <td>23</td>
-          <td>24</td>
-        </tr>
-      </tbody>
-    </table>
+   
     
-  </div>
-  <small>*Tee cutting may differ slightly (+/- 5%) from above measurements during the cut and sew process.</small>
-    </div>
-    <div class="form-group">
-      <legend class="col-form-label">Finisher T-Shirt Size</legend>
-      <div class="form-check">
-        <input class="form-check-input" type="radio" name="finisher" id="F2XS" value="2XS" required>
-        <label class="form-check-label" for="F2XS">
-          2XS
-        </label>
-      </div>
-      <div class="form-check">
-        <input class="form-check-input" type="radio" name="finisher" id="FXS" value="XS" required>
-        <label class="form-check-label" for="FXS">
-          XS
-        </label>
-      </div>
-      <div class="form-check">
-        <input class="form-check-input" type="radio" name="finisher" id="FS" value="S">
-        <label class="form-check-label" for="FS">
-          S
-        </label>
-      </div>
-      <div class="form-check">
-        <input class="form-check-input" type="radio" name="finisher" id="FM" value="M">
-        <label class="form-check-label" for="FM">
-          M
-        </label>
-      </div>
-      <div class="form-check">
-        <input class="form-check-input" type="radio" name="finisher" id="FL" value="L">
-        <label class="form-check-label" for="FL">
-          L
-        </label>
-      </div>
-      <div class="form-check">
-        <input class="form-check-input" type="radio" name="finisher" id="FXL" value="XL">
-        <label class="form-check-label" for="FXL">
-          XL
-        </label>
-      </div>
-      <div class="form-check">
-        <input class="form-check-input" type="radio" name="finisher" id="F2XL" value="2XL">
-        <label class="form-check-label" for="F2XL">
-          2XL
-        </label>
-      </div>
-      <div class="form-check">
-        <input class="form-check-input" type="radio" name="finisher" id="F3XL" value="3XL" required>
-        <label class="form-check-label" for="F3XL">
-          3XL
-        </label>
-      </div>
-      <div class="invalid-feedback">
-        Please select your sizing for your finisher T-Shirt
-      </div>
-    </div>
   </div>
 </div>
 
