@@ -50,6 +50,10 @@ p{
   text-align: left;
 }
 
+a{
+  word-break: break-all;
+}
+
 header iframe {
   position: absolute;
   top: 50%;
