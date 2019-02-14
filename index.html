@@ -476,12 +476,16 @@ s0.parentNode.insertBefore(s1,s0);
     }
 
     var trackOutboundLink = function(url) {
-      gtag('event', 'click', {
-        'event_category': 'outbound',
-        'event_label': url,
-        'transport_type': 'beacon',
-        'event_callback': function(){document.location.href = url;}
-      });
+      if(!ga.q){
+        gtag('event', 'click', {
+          'event_category': 'outbound',
+          'event_label': url,
+          'transport_type': 'beacon',
+          'event_callback': function(){document.location.href = url;}
+        });
+      }else{
+        document.location.href = url;
+      }
     }
   </script>
 
