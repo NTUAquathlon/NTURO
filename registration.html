@@ -1230,7 +1230,7 @@
                     }else if(responseObject.StatusCode == 200){
                       alert("Successful registration, we will now redirect you to the payment page" + "\n\n" + 
                         "We have also emailed you the payment url");
-                      window.location.href = '/payment.html?code=' + responseObject.Code + "&name=" + encodeURI(document.getElementsByName("name")[0].value);
+                      window.location.href = '/payment.html?code=' + encodeURI(responseObject.Code) + "&name=" + encodeURI(document.getElementsByName("name")[0].value);
                     }else if(responseObject.StatusCode == 123){
                       alert("There seems to be some issue with the server, we'll get back to you soon, otherwise email us at nturo@ntuaquathlon.com");
                     }

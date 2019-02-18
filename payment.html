@@ -186,9 +186,9 @@ function getQueryVariable(variable)
        return(false);
 }
 
-var code = getQueryVariable("code")
+var code = decodeURI(getQueryVariable("code"))
 
-var name = getQueryVariable("name")
+var name = decodeURI(getQueryVariable("name"))
 
 if (typeof code != "undefined"){
   $.getJSON('https://ntuaquathlon.azurewebsites.net/promo?code=' + code.toUpperCase(),function(data){
@@ -208,7 +208,7 @@ if (typeof code != "undefined"){
 }
 
 if (typeof name != "undefined"){
-  document.getElementById("name").innerText = decodeURI(name)
+  document.getElementById("name").innerText = name;
 }
 </script>
 

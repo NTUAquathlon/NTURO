@@ -1114,19 +1114,24 @@
                       responseObject.error.forEach(function(element){
                         var item = document.getElementsByName(element.field)[0];
 -                       item.setCustomValidity('Check')
--                        alert('Check your inputs highlighted in Red');
+                        document.body.scrollTop = 0;
+                        document.documentElement.scrollTop = 0;
+-                       alert('Check your inputs highlighted in Red');
                       })
                       
 
                     }else if(responseObject.StatusCode == 200){
-                      alert("Successful registration, we will now redirect you to the payment page" + "\n" + 
+                      alert("Successful registration, we will now redirect you to the payment page" + "\n\n" + 
                         "We have also emailed you the payment url");
-                      window.location.href = '/payment.html?code=' + responseObject.Code + "&name=" + document.getElementsByName("name")[0].value;
+                      window.location.href = '/payment.html?code=' + encodeURI(responseObject.Code) + "&name=" + encodeURI(document.getElementsByName("name")[0].value);
                     }else if(responseObject.StatusCode == 123){
                       alert("There seems to be some issue with the server, we'll get back to you soon, otherwise email us at nturo@ntuaquathlon.com");
                     }
 
 
+                 },
+                 error: function() {
+                  alert("There seems to be an issue with the server, check back later." + "\n+" + "Try contacting us via the live support on the homepage if problem persist.")
                  }
             });
         }else{
