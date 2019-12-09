@@ -67,7 +67,7 @@ header {
     background-image: url("aboutbg.png");
     display: table;
     height: 100%;
-    position: fixed;
+    position: relative;
     width: 100%;
     background-size: over;
   }
