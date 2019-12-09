@@ -18,8 +18,8 @@
       	margin-top:10%;
       }*/
       nav{
-      	background-color: white;
-      	/*color:white: */
+      	background-color:#EBEBEB ;
+      	/*color:white: #EBEBEB */
       }
 
       #category .row div{
@@ -27,9 +27,20 @@
       	padding-bottom:30px;
       }
 
+      .btn {
+        border: white;
+        font-family: Anton,sans-serif;
+        background-color: inherit;
+        padding:0px ;
+        font-size: 80px;
+        cursor: pointer;
+        display: inline-block;
+            }
+        .btn:hover {
+              background-color: white;
+            }
 
 
-      /* Header */
 
       html{
         scroll-behavior: smooth;
@@ -38,14 +49,82 @@
 
 
 header {
-  position: relative;
-  background-color: black;
+  background-image: url("nturobg.jpg");
+  display: table;
   height: 100%;
-  min-height: 25rem;
+  position: relative;
   width: 100%;
-  overflow: hidden;
-}
+  background-size: over;
+    }
 
+
+#about {
+    background-image: url("aboutbg.png");
+    display: table;
+    height: 100%;
+    position: relative;
+    width: 100%;
+    background-size: over;
+  }
+
+#category {
+  background-image: url("racemap2.png");
+  display: table;
+  height: 100%;
+  position: relative;
+  width: 100%;
+  background-size: over;
+
+}
+#info {
+  background-image: url("categories.png");
+  display: table;
+  height: 900px;
+  position: relative;
+  width: 100%;
+  background-size: auto;
+  background-repeat: no-repeat;
+
+}
+#partners {
+  background-image: url("register.png");
+  display: table;
+  height: 800px;
+  position: relative;
+  width: 100%;
+  background-size: over;
+
+}
+.direction {
+    position: relative;
+}
+.top-right {
+  position: absolute;
+  top: 45%;
+  left: 60%;
+  width: 100%;
+}
+/*#direction {
+  background-image: url("direction.png");
+  display: table;
+  height: 100%;
+  position: relative;
+  width: 100%;
+  background-size: auto;
+  background-repeat: no-repeat;
+
+}*/
+
+#faq {
+  background-image: url("faq.png");
+  display: table;
+  height: 100%;
+  position: relative;
+  width: 100%;
+  background-size: auto;
+  background-repeat: no-repeat;
+
+}
 p{
   text-align: left;
 }
@@ -121,6 +200,7 @@ html, body{
   padding:5px 10px;
 }
 
+
 header .mobile-overlay {
     background: url('https://img.youtube.com/vi/mQcoLu7hVOY/maxresdefault.jpg') black no-repeat center center scroll;
     background-size: cover;
@@ -147,10 +227,11 @@ header .mobile-overlay {
 .table-responsive td{
       text-align:center;
     }
+
     #info h3{
       padding-top:50px;
     }
-    
+
   #sponsors img{
     /*max-height: ;*/
     max-height:300px;
