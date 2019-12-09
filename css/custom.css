@@ -86,7 +86,7 @@ header {
   height: 900px;
   position: relative;
   width: 100%;
-  background-size: auto;
+  background-size: over;
   background-repeat: no-repeat;
   overflow: auto
 
@@ -127,8 +127,9 @@ header {
   height: 100%;
   position: relative;
   width: 100%;
-  background-size: auto;
+  background-size: over;
   background-repeat: no-repeat;
+  overflow: auto
 
 }
 p{
