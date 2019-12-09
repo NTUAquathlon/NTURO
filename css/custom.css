@@ -63,10 +63,9 @@ header {
     background-image: url("aboutbg.png");
     display: table;
     height: 100%;
-    position: relative;
+    position: fixed;
     width: 100%;
     background-size: over;
-    overflow: auto
   }
 
 #category {
