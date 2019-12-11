@@ -5,11 +5,7 @@
         text-anchor: middle;
       }
 
-      @media (min-width: 500px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
-        }
-      }
+     
 
       .sections{
       	padding-top:50px;
@@ -61,7 +57,7 @@ header {
     }
 
 
-#about {
+.about {
     background-image: url("aboutbg.png");
     display: table;
     height: 100%;
@@ -132,6 +128,18 @@ header {
   overflow: auto
 
 }
+
+ @media (min-width: 500px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+         .about div {
+            background-color: #EBEBEB;
+            background-image: none !important;
+
+          }
+      }
+
 p{
   text-align: left;
 }
