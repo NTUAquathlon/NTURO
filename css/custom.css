@@ -66,7 +66,7 @@ header {
     background-size: over;
   }
 
-#category {
+.raceday {
   background-image: url("racemap2.png");
   display: table;
   height: 100%;
@@ -76,7 +76,7 @@ header {
   overflow: auto
 
 }
-#info {
+.category {
   background-image: url("categories.png");
   display: table;
   height: 900px;
@@ -87,7 +87,7 @@ header {
   overflow: auto
 
 }
-#partners {
+.register {
   background-image: url("register.png");
   display: table;
   height: 800px;
@@ -117,7 +117,7 @@ header {
 
 }*/
 
-#faq {
+.faq {
   background-image: url("faq.png");
   display: table;
   height: 100%;
@@ -133,9 +133,38 @@ header {
         .bd-placeholder-img-lg {
           font-size: 3.5rem;
         }
+         .header{
+            max-height:40%
+
+          }
          .about div {
             background-color: #EBEBEB;
             background-image: none !important;
+
+          }
+         .raceday {
+            
+            background-image: none !important;
+            background-color: #EBEBEB !important;
+
+          }
+         .category {
+            
+            background-image: none !important;
+            background-color: #EBEBEB !important;
+
+          }
+         .register {
+            
+            background-image: none !important;
+            background-color: #EBEBEB !important;
+
+          }
+
+         .faq {
+            
+            background-image: none !important;
+            background-color: #EBEBEB !important;
 
           }
       }
