@@ -12,30 +12,40 @@
     <link href="css/custom.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Anton|Oswald|Patua+One&display=swap" rel="stylesheet">
     <style>
-	    
-    body{  
+    @media (min-width: 375px) {
+      header {
+        max-height: 80%
+      }
+
+          }
+    body{
       font-size: 25px;
       overflow-x: hidden;
+      background-image: none !important;
+      background-color: #ebebeb;
+
+
         }
+
     h1{
       font-family: 'Anton', sans-serif;
-      font-size: 60px;
+      font-size: 240%;
     }
     h3{
       font-family: 'Anton', sans-serif;
-      font-size: 40px;
+      font-size: 160%;
     }
     p{
       font-family: 'Oswald', serif;
-      font-size: 25px;
+      font-size: 100%;
     }
     ol{
       font-family: 'Patua One', cursive;
-      font-size: 20px;
+      font-size: 100%;
     }
     ul{
       font-family: 'Patua One', cursive;
-      font-size: 20px;
+      font-size: 80%;
     }
     </style>	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-72214160-5"></script>
 
@@ -49,10 +59,8 @@
 
   <!-- Your customer chat code -->
   </head>
-	
-  <body data-spy="scroll" data-target="#navbar">
-<nav class="navbar navbar-light bg-light fixed-top navbar-expand-lg" id="navbar">
-  <div class="container-fluid">
+    <div class="container-fluid">
+    <nav class="navbar navbar-light bg-light fixed-top navbar-expand-lg" id="navbar">
     <a class="navbar-brand" href="#">
       <img src="images/logo/logo.png" alt="NTURO" class="img-fluid" style="max-width:24px;">
     </a>
@@ -86,51 +94,48 @@
   </div>
 </div>
 </nav>
-	  
-<header>
- <div class="container-fluid" >
-  <div class="row">
-      <img src="images/landing.gif" alt="Logo" class="" style="width:100%;height:auto;">
+
+ <header>
+ <div class="container" style="justify-content:center;align-items: center;text-align:center" >
+      <img src="images/landing.gif" alt="Logo" class="" style="width:100%;height:auto;text-align:center">
     </div>
   </div>
 </header>
 
-
-<div class="container-fluid" id="about" style= "text-align: center">
-	<div class="row">
-		<div class ="about">
+ <div class="container-fluid" id="about" style= "text-align: left">
+  <div class="row">
+  <div class="about">
       <br>
       <br>
     </br>
   </br>
-<h1 class= "mx-auto col-md-6" style="color:black;text-align: left;">About</h1> <br  />
-<p class= "mx-auto col-md-6" style="color:black;text-align: left;">
+      <h1 class= "mx-auto col-md-6" style="color:black;text-align: left;">About</h1> <br  />
+			<p class= "mx-auto col-md-6" style="color:black;text-align: left;">
         NTURO is a race for all multi-sports enthusiast to have a platform for competitive racing in the swim and run disciplines using a very unique format.
         This race is a non-stop burst of swim-run-swim-run-swim-run without any breaks. With the added element of fast transitions during the race. Who knew changing fast could be a sport?
 			 	<br /><br />
 				Bringing this uncommon concept of swim & run to Singapore, we would like to use this race as a springboard to inspire everyone to step out of their comfort zones and do something unique too!
     	</p>
+      <br>
+    </br>
 		</div>
   </div>
+ </div>
   <img src="images/sponsors.png" alt="Partners" class="" style="width:100%;height:auto;margin-bottom:0px">
   <img src="images/space.png" class="" style="width:100%;height:auto;margin-bottom:0px">
 </div>
-</div>
 
-
-<div class="container-fluid" id="category" style="text-align:left;">
+ <div class="container-fluid" id="category" style="text-align:left;">
   <div class="row">
     <img src="images/raceday.png" alt="Partners" class="" style="width:100%;height:auto;margin-bottom:0px">
     <!--div style="align-self:flex-end;width:700px;height:500px;justify-content:center;align-items: center;">
       <img src="images/Race day.png" alt="Race day" class="" style="width:100%;height:auto;margin-bottom:0px"-->
 
   </div>
-</div>
-</div>
+ </div>
 
-<div class="container-fluid" id="category" style="text-align:center;">
+ <div class="container-fluid" id="category" style="text-align:center;">
       <div class="row">
-	      <div class="raceday">
         <div class="mx-auto col-md-8">
          <h3 style="text-align:center">Swim Map</h3>
          <P>
@@ -173,15 +178,15 @@
           <img src="images/RaceInfo/run.png" alt="Run Map" class="" style="width:60%;height:auto;">
         </div>
       </div>
+         </div>
        </div>
      </div>
    </div>
  </div>
-</div>
+ </div>
 
-<div class="container-fluid" id="info">
+ <div class="container-fluid" id="info">
   <div class="row">
-	  <div class ="register">
     <h1 class= "mx-auto col-md-12" style="color:black;text-align: center;">Category</h1>
 
   <br>
@@ -225,7 +230,6 @@
         <li> Drawstring bag </li>
         <li> Sponsored goodie bag items </li>
       </ol>
-      <br /><br />
     </p>
 		</div>
     <div class="table-responsive">
@@ -233,74 +237,57 @@
             Details of race entitlements available <a href="racepack.html"> here</a>
           <p style="text-align:center;">*Early birds gets <b>$8</b> Off in All Categories (Ends 21 December)</p>
         </div>
-</div>
-</div>
-</div>
-<div class="container-fluid " id="partners">
- <div class="row">
-	<div class = "register">
-  <br>
-</br>
-<br>
-</br>
-<br>
-</br>
-<br>
-</br>
-<br>
-</br>
+	</div>
+ </div>
+ <br>
 
-    <div class="col-md-6 mx-auto">
+</br>
+ <div class="container-fluid " id="partners">
+  <div class="row">
+    <h1 class= "mx-auto col-md-12" style="color:black;text-align: center;">Registration</h1> <br  />
+    <div class="col-md-4 mx-auto">
       <h1 style="text-align:left;">Register to</h1>
-      <a href="http://tiny.cc/NTURORegistration" class="btn btn-elegant btn-lg" role="button" aria-pressed="true">Race!</a>
+        <a href="http://tiny.cc/NTURORegistration" class="btn btn-outline-danger btn-lg" role="button" aria-pressed="true">Race!</a>
     </div>
-      <div class="col-md-3 mx-auto">
-        <br>
-        </br>
-        <br>
-        </br>
-        <br>
-        </br>
-        <br>
-        </br>
-        <br>
-        </br>
+      <div class="col-md-4 mx-auto">
         <h1 style="text-align:left;">Register to</h1>
-        <a href="http://tiny.cc/NTUROVolunteers" class="btn btn-elegant btn-lg" role="button" aria-pressed="true">volunteer</a>
+          <a href="http://tiny.cc/NTUROVolunteers" class="btn btn-outline-primary btn-lg" role="button" aria-pressed="true">volunteer</a>
       </p>
     </div>
   </div>
-</div>
-</div>
+ </div>
 
-<div class="container-fluid" id="direction">
+ <div class="container" id="direction">
   <div class ="row">
-<div class ="direction">
-    <img src="images/direction.png" alt="direction" class="" style="width:100%;height:auto;margin-bottom:0px">
-    <div class="top-right">
+   <h3> How do I get to the race venue ?</h3>
+   <p>
+   Public Bus Service 179 is available at Boon Lay Bus Interchange. Alight opposite Hall of Residence 6 and walk to Sports and Recreation Centre (SRC)
+   <br />
+   <br />
+   Another option is to take Public Bus Service 179 from Pioneer MRT Station Exit A and alight opposite Hall of Residence 6 and walk to Sports and Recreation Centre (SRC)
+   <br />
+   <br />
+   Alternatively, you may take Campus Weekend Rider (CWR) at Pioneer MRT Station Exit B bus stop area
+   <br />
+   <br />
+   More information is available <a href="http://www.ntu.edu.sg/AboutNTU/visitingntu/Pages/location.aspx">here</a>.
     <h3>What are the rules for the race ?</h3>
-    <p class="col-3">We follow conventional triathlon race rules, Click <a href="rules.html" target="_blank">here</a> to view</p-->
+    <p>We follow conventional triathlon race rules, Click <a href="rules.html" target="_blank">here</a> to view</p-->
   </div>
 </div>
-</div>
-</div>
+ </div>
+ </div>
 
-<div class="container-fluid" id="faq">
-	<div class ="row">
-	<div class="faq">
-    <br>
-  </br>
-  <br>
-</br>
+ <div class="container-fluid" id="faq">
 		<div class="col-md-10">
 			<h3 style="text-align:center;">Have yet to clear your doubts?</h3>
 			<p style="text-align:center;">Drop us a message on our FB page, NTURO or contact us at <a href="mailto:nturo.aquathlon@gmail.com">nturo.aquathlon@gmail.com</a></p>
     </div>
   </div>
-</div>
-</div>
+ </div>
+ </div>
 
-<footer>
+ <footer>
   <div class="container">
   <div class="row">
     <div class="col-3" style="overflow:hidden">
@@ -327,7 +314,7 @@
 
   </div>
   </div>
-</footer>
+ </footer>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script>window.jQuery || document.write('<script src="https://getbootstrap.com/docs/4.2/assets/js/vendor/jquery-slim.min.js"><\/script>')</script><script src="https://getbootstrap.com/docs/4.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-zDnhMsjVZfS3hiP7oCBRmfjkQC4fzxVxFhBx8Hkz2aZX8gEvA/jsP3eXRCvzTofP" crossorigin="anonymous"></script><script>
   </script>
@@ -355,6 +342,6 @@
 
 
 
-</body>
+ </body>
 
 </html>
