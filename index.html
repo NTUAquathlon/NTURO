@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html lang="en">
   <head>
@@ -9,46 +8,9 @@
     <title>NTURO 2020</title>
     <link rel=icon href=images/favicon.png>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
     <link href="css/custom.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Anton|Oswald|Patua+One&display=swap" rel="stylesheet">
-    <style>
-    @media (min-width: 375px) {
-      header {
-        max-height: 80%
-      }
-
-          }
-    body{
-      font-size: 25px;
-      overflow-x: hidden;
-      background-image: none !important;
-      background-color: #ebebeb;
-
-
-        }
-
-    h1{
-      font-family: 'Anton', sans-serif;
-      font-size: 240%;
-    }
-    h3{
-      font-family: 'Anton', sans-serif;
-      font-size: 160%;
-    }
-    p{
-      font-family: 'Oswald', serif;
-      font-size: 100%;
-    }
-    ol{
-      font-family: 'Patua One', cursive;
-      font-size: 100%;
-    }
-    ul{
-      font-family: 'Patua One', cursive;
-      font-size: 80%;
-    }
-    </style>	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-72214160-5"></script>
-
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-72214160-5"></script>
 	<script>
 	  window.dataLayer = window.dataLayer || [];
 	  function gtag(){dataLayer.push(arguments);}
@@ -56,11 +18,31 @@
 
 	  gtag('config', 'UA-72214160-5');
 	</script>
+    <!-- Load Facebook SDK for JavaScript -->
+  <div id="fb-root"></div>
+  <script>
+    window.fbAsyncInit = function() {
+      FB.init({
+        xfbml            : true,
+        version          : 'v3.2'
+      });
+    };
+
+    (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
 
   <!-- Your customer chat code -->
+  
+
   </head>
-    <div class="container-fluid">
-    <nav class="navbar navbar-light bg-light fixed-top navbar-expand-lg" id="navbar">
+  <body data-spy="scroll" data-target="#navbar">
+<nav class="navbar navbar-light bg-light fixed-top navbar-expand-lg" id="navbar">
+  <div class="container">
     <a class="navbar-brand" href="#">
       <img src="images/logo/logo.png" alt="NTURO" class="img-fluid" style="max-width:24px;">
     </a>
@@ -70,24 +52,29 @@
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
      <ul class="navbar-nav w-100 justify-content-around">
-
       <li class="nav-item">
         <a class="nav-link" href="#about">About</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#info">Category</a>
+        <a class="nav-link" href="#category">Categories</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#partners">Registration</a>
+        <a class="nav-link" href="#info">Information</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#category">Race Day</a>
+        <a class="nav-link" href="#partners">Partners</a>
       </li>
+      <!-- <li class="nav-item">
+        <a class="nav-link" href="#sponsors">Sponsors</a>
+      </li> -->
       <li class="nav-item">
-        <a class="nav-link" href="#direction">Directions</a>
+        <a class="nav-link" href="#volunteer">Volunteer</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#faq">FAQ</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#contact">Contact</a>
       </li>
     </ul>
 
@@ -95,152 +82,196 @@
 </div>
 </nav>
 
- <header>
- <div class="container" style="justify-content:center;align-items: center;text-align:center" >
-    <div class="gif">
-      <img src="images/landing.gif" alt="Logo" class="" style="width:100%;height:auto;text-align:center">
+<header>
+  
+ <!--  <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop" class="d-none d-md-block d-lg-block">
+    <source src="video/running.mp4" type="video/mp4">
+  </video> -->
+  <div id="youtube-player">
+  </div>
+
+  <div class="overlay d-none d-md-block d-lg-block" ></div>
+  <div class="mobile-overlay d-md-none d-lg-none" ></div>
+  <div class="container h-100 fill">
+      <div class="d-flex justify-content-between h-100 text-left align-items-center">
+        <div class="text-white">
+          <h1 class="display-3">NTURO 2020</h1>
+          <h2>Endurance Beyond Limits.</h2>
+          <!-- <p>Registration Closed</p> -->
+           <a href="#category"><button type="button" class="btn btn-primary" disabled>Coming soon</button></a> 
+        </div>
+
+        <div style="align-self:flex-end;width:50px;height:50px;justify-content:center;align-items: center;">
+          <a href="#about" style="color:inherit;"><h1 class="text-white arrow" style="">></h1></a>
+        </div>
+      
+        <div class="text-white header-logo d-none d-md-block d-lg-block">
+          <img src="images/logo/stacked-white.png" alt="NTURO LOGO" class="img-fluid" style="background:transparent;width:auto;height:400px">
+        </div>
+
+
+
     </div>
+    
+
+
   </div>
 </header>
 
- <div class="container-fluid" id="about" style= "text-align: left">
-  <div class="row">
-  <div class="about">
-      <br>
-      <br>
-    </br>
-  </br>
-      <h1 class= "mx-auto col-md-6" style="color:black;text-align: left;">About</h1> <br  />
-			<p class= "mx-auto col-md-6" style="color:black;text-align: left;">
-        NTURO is a race for all multi-sports enthusiast to have a platform for competitive racing in the swim and run disciplines using a very unique format.
-        This race is a non-stop burst of swim-run-swim-run-swim-run without any breaks. With the added element of fast transitions during the race. Who knew changing fast could be a sport?
-			 	<br /><br />
-				Bringing this uncommon concept of swim & run to Singapore, we would like to use this race as a springboard to inspire everyone to step out of their comfort zones and do something unique too!
-    	</p>
-      <br>
-    </br>
-		</div>
+<div class="fb-customerchat"
+    attribution=setup_tool
+    page_id="314959879123026">
   </div>
- </div>
+
+<div class="container sections " id="about">
+	<div class="row">
+		<div class="col-md-9 mx-auto">
+			<h1 style="text-align:center;">About NTURO</h1>
+			<p>
+			 	NTURO is a race for all multi-sports enthusiast to have a platform for competitive race for both the swim and run discipline. This race is a non-stop burst of swim-run-swim-run-swim-run without any breaks. With the added element of speed of transition during the race. 
+			 	<br /><br />
+				Participants will then not only enjoy the race but also to have exposure for newcomers venturing into this field of sport. This can be regarded as one of the platforms that will push the participants beyond their limits to see how far they can go.
+			</p>
+		</div>
+	</div>
 </div>
-
-<div class="container-fluid" id="info">
+<div class="container sections" id="category" style="text-align:center;">
   <div class="row">
-    <h1 class= "mx-auto col-md-12" style="color:black;text-align: center;">Category</h1>
-
-  <br>
-
-</br>
-		<div class="mx-auto col-md-3">
-			<h3 >Individual </h3>
+    <h1 class="col-md-12" style="color:black;text-align: center;">Categories</h1>
+  </div>
+	<div class="row">
+		<div class="col-md-6  ">
+			<h3 >Relay Category</h3>
 			<p style="text-align:left;">
-        3 sets of (300m swim and 2km run)
-      <h3 >Price: $55/pax </h3>
-      <p style="text-align:left;">
-        <p style="font-family: Patua One;">
-          <p style ="font-size: 20px;">
-            Race Pack includes:
-        <ol type = "1">
-          <li> Finisher T shirt </li>
-	<li> Aquathlon starter pack </li>
-		<ul> 	
-			<li> Exclusive RedbullxNTURO swim cap </li>
-			<li> Race belt </li>
-			<li> Locklaces </li>
-			<li> Small towel </li>
-		</ul>
-          <li> Race Bib </li>
-          <li> Merchandise from sponsors </li>
-          <li> Lucky draw prizes </li>
-        </ol>
+        Team Relay Category is open to teams in groups of 3. Each member in the relay team will do 1 set of 300m swim and 2km run.
+        <br /><br />
          <!-- <b style="text-align:center;">$35</b>  -->
 			</p>
-       <!-- <a href="#" class="btn btn-primary text-white disabled">Coming Soon</a>  -->
-		</div>
-		  <div class="mx-auto col-md-3">
-			    <h3 style="text-align:left;">Relay</h3>
-			     <p style="text-align:left;">
-			      Each team consists of 3 members. Each member will do 1 set of 300m swim and 2km run.
-      <h3 style="text-align:left;;">Price: $40/pax </h3>
-      <p style="text-align:left;">
-        <p style="font-family: Patua One;">
-          <p style ="font-size: 20px;">
-            Race Pack includes:
-       <ol type = "1">
-          <li> Finisher T shirt </li>
-	<li> Aquathlon starter pack </li>
-		<ul> 	
-			<li> Exclusive RedbullxNTURO swim cap </li>
-			<li> Race belt </li>
-			<li> Locklaces </li>
-			<li> Small towel </li>
-		</ul>
-          <li> Race Bib </li>
-          <li> Merchandise from sponsors </li>
-          <li> Lucky draw prizes </li>
-        </ol>
-    </p>
+			<!--button class="btn disabled">Registration Closed</button> -->
+       <a href="#" class="btn btn-primary text-white disabled">Coming Soon</a>  
+		</div> 
+		<div class="col-md-6">
+			<h3 style="text-align:center;">Individual Category</h3>
+			<p style="text-align:left;">
+			   Individual Category involves 3 sets of (300m swim and 2km run)
+        <br />
+        <br />
+        <br />    
+        <!-- <b style="text-align:center;">$55</b> -->
+			</p>
+      <!--button class="btn disabled">Registration Closed</button> -->
+			 <a href="#" class="btn btn-primary text-white disabled">Coming Soon</a> 
 		</div>
     <div class="table-responsive">
-        <p style="text-align:center;">
-            Details of race entitlements available <a href="racepack.html"> here</a>
-          <p style="text-align:center;">*Early birds gets <b>$8</b> Off in All Categories (Ends 21 December)</p>
+    <h3>Pricing</h3>
+        <p style="text-align:center;">Details of race entitlements are TBC </p>
+        <table class="table col-md-8 mx-auto" style="text-align:left">
+          <tbody>
+            <tr>
+              <th>Individual Category</th>
+              <td>
+                <b>$55/pax</b>
+              </td>
+            </tr>
+            <tr>
+              <td style="text-align:left;" colspan="2">
+              
+              </td>
+            </tr>
+            <tr>
+              <th>Relay Category</th>
+              <td>
+                  <b>$45/pax</b>
+              </td>
+            </tr>
+            <tr>
+              <td style="text-align:left;" colspan="2">
+              
+              </td>
+            </tr>
+          </tbody>
+          </table>
+          <p style="text-align:center;">*Early Bird promotion: <b>$8</b> Off in All Categories</p>
+          
         </div>
+        
 	</div>
- </div>
- <br>
+</div>
 
-</br>
- <div class="container-fluid " id="partners">
-  <div class="row">
-    <h1 class= "mx-auto col-md-12" style="color:black;text-align: center;">Registration</h1> <br  />
-    <div class="col-md-3 mx-auto">
-      <h1 style="text-align:left;">Register to</h1>
-        <a href="http://tiny.cc/NTURORegistration" class="btn btn-outline-danger btn-lg" role="button" aria-pressed="true">Race!</a>
-    </div>
-      <div class="col-md-3 mx-auto">
-        <h1 style="text-align:left;">Register to</h1>
-          <a href="http://tiny.cc/NTUROVolunteers" class="btn btn-outline-primary btn-lg" role="button" aria-pressed="true">volunteer</a>
-      </p>
-    </div>
-  </div>
- </div>
+<div class="container sections" id="info" style="text-align:center;">
+	<div class="row">
+		<div class="col-md-12">
+			<h1>Race Information</h1>
+		</div>
 
 
- <div class="container-fluid" id="category" style="text-align:left;">
-  <div class="row">
-    <img src="images/raceday.png" alt="Partners" class="" style="width:100%;height:auto;margin-bottom:0px">
-    <!--div style="align-self:flex-end;width:700px;height:500px;justify-content:center;align-items: center;">
-      <img src="images/Race day.png" alt="Race day" class="" style="width:100%;height:auto;margin-bottom:0px"-->
-
-  </div>
- </div>
-
- <div class="container-fluid" id="category" style="text-align:center;">
-      <div class="row">
-        <div class="mx-auto col-md-8">
-         <h3 style="text-align:center">Swim Map</h3>
-         <P>
-           This is an overview of the swim route for each set. Each set consists of 300m swim, which is 6 laps of 50m.
-           <br />
-           <b>Individual Category</b> participants are to complete a total of 900m swim.
-           <br />
-           <b>Relay Category</b> participants are to each complete a 300m swim.
-         </p>
-          <img src="images/RaceInfo/swim.jpeg" alt="Swim Map" class="" style="width:80%;height:auto;margin-bottom:20px">
-          <!--a href="images/RaceInfo/swim.jpeg" target="_blank">Full Image</a-->
-          <br />
+    <div class="table-responsive">
+            <table class="table col-md-8 mx-auto" style="text-align:left">
+          <tbody>
+            <tr>
+              <th>Date</th>
+              <td colspan="2">29th February 2020</td>
+            </tr>
+            <tr>
+              <th>Time</th>
+              <td colspan="2">0700hrs - 1500hrs</td>
+            </tr>
+            <tr>
+              <th>Location</th>
+              <td colspan="2"><a href="https://goo.gl/maps/JwnbpdSxHfk" target="_blank">NTU Sports and Recreation Center</a></td>
+            </tr>
+            <tr>
+              <th>Race Format</th>
+              <td>Individual Category</td>
+              <td>3 sets of ( 300m swim and 2km run )</td>
+            </tr>
+            <tr>
+              <th></th>
+              <td>Relay Category</td>
+              <td>( 300m swim and 2km run ) per member</td>
+            </tr>
+            </tbody>
+        </table>
+        
+      </div>
+	</div>
+     <div class="row">
+		
+			<div class="mx-auto col-md-10">
+        <div class="row">
+          <div class="col-12">
+          <h3 style="text-align:center">Swim Map</h3>
+          <p>
+            This is an overview of the swim route for each set. Each set consists of 300m swim, which is 6 laps of 50m. 
+            <br />
+            <b>Individual Category</b> participants are to complete a total of 900m swim. 
+            <br />
+            <b>Relay Category</b> participants are to each complete a 300m swim. 
+          </p>
+    			<img src="images/RaceInfo/swim.jpeg" alt="Swim Map" class="" style="width:100%;height:auto;">
+          <a href="images/RaceInfo/swim.jpeg" target="_blank">Full Image</a>
+          </div>
+        </div>
+        <div class="row" style="margin-top:40px;">
+          <div class="col-12">
           <b style="text-align:center;margin-top:40px">1st Set</b>
           <p>The swim will commence with 5 waves of 2 participants with an interval of 10 seconds per wave. All participants are to start at lane 1 position and exit at lane 2. </p>
-          <img src="images/RaceInfo/swim1.jpeg" alt="Swim Map 2 Set" class="" style="width:80%;height:auto;margin-bottom:20px">
+          <img src="images/RaceInfo/swim1.jpeg" alt="Swim Map 2 Set" class="" style="width:100%;height:auto;margin-bottom:20px">
+          <!-- <a href="images/RaceInfo/swim1.jpeg" target="_blank">Full Image</a> -->
+        <!-- </div> -->
+        <!-- <div class="row"> -->
           <br />
           <b style="text-align:center;margin-top:40px" >2nd Set</b>
           <p>Only after participants have completed with their first 2km run, participants will enter from lane 3 and exit at lane 5 to complete their second 300m swim.</p>
-          <img src="images/RaceInfo/swim2.jpeg" alt="Swim Map 2 Set" class="" style="width:80%;height:auto;margin-bottom:20px">
+          <img src="images/RaceInfo/swim2.jpeg" alt="Swim Map 2 Set" class="" style="width:100%;height:auto;margin-bottom:20px">
+          <!-- <a href="images/RaceInfo/swim2.jpeg" target="_blank">Full Image</a> -->
+        <!-- </div>-->
+        <!-- <div class="row"> -->
           <br />
           <b style="text-align:center;margin-top:40px" >3rd Set</b>
           <p>Upon completing the second 2km, participants will commence the last swimming segment by entering from lane 6 and exiting at lane 8.</p>
-          <img src="images/RaceInfo/swim3.jpeg" alt="Swim Map 3 Set" class="" style="width:80%;height:auto;margin-bottom:20px">
+          <img src="images/RaceInfo/swim3.jpeg" alt="Swim Map 3 Set" class="" style="width:100%;height:auto;margin-bottom:20px">
+          <!-- <a href="images/RaceInfo/swim3.jpeg" target="_blank">Full Image</a> -->
           <br />
           <b style="text-align:center;margin-top:40px" >Take Note</b>
           <ul style="text-align:left;">
@@ -249,68 +280,170 @@
             <li>All participants are to swim beyond and past the Buoy as indicated by the Red Dot <span style="background-color: red;border-radius: 50%;display: inline-block;width:15px;height:15px;"></span></li>
           </ul>
         </div>
-        <div class="mx-auto col-md-8">
-          <h3>Run Map</h3>
-          <p>This is an overview of a 2km run route transiting from a 300m swim for each set.
-            <br />
-          <b>Individual Category</b> participants are to complete 3 sets of this run route and to end their run at the Finishing Point.
-          <br />
-          <b>Relay Category</b> participants are to each complete 1 sets of this run route and to end their run at the Transitioning Point.
-        </p>
-          <img src="images/RaceInfo/run.png" alt="Run Map" class="" style="width:60%;height:auto;">
+
         </div>
       </div>
-         </div>
-       </div>
-     </div>
-   </div>
- </div>
-<h1 style="text-align:center"> Big Shoutout to our Partners</h1>
- <img src="images/sponsors.png" alt="Partners" class="" style="width:100%;height:auto;margin-bottom:0px">
 
- </div>
+      <div class="mx-auto col-md-10">
+        <h3>Run Map (Coming soon) </h3>
+        <p>
+        <b>Individual Category</b> participants are to complete 3 sets of this run route and to end their run at the Finishing Point.
+        <br />
+        <b>Relay Category</b> participants are to each complete 1 sets of this run route and to end their run at the Transitioning Point.
+      </p>
 
- 
- <div class="container" id="direction">
-  <div class ="row">
-	<div class="col-md-12">
-	<div>
-   <h3> How do I get to the race venue ?</h3>
-   <p>
-   Public Bus Service 179 is available at Boon Lay Bus Interchange. Alight opposite Hall of Residence 6 and walk to Sports and Recreation Centre (SRC)
-   <br />
-   <br />
-   Another option is to take Public Bus Service 179 from Pioneer MRT Station Exit A and alight opposite Hall of Residence 6 and walk to Sports and Recreation Centre (SRC)
-   <br />
-   <br />
-   Alternatively, you may take Campus Weekend Rider (CWR) at Pioneer MRT Station Exit B bus stop area
-   <br />
-   <br />
-   More information is available <a href="http://www.ntu.edu.sg/AboutNTU/visitingntu/Pages/location.aspx">here</a>.
-   <br />
-   </p>
+      </div>
+
+		</div>
 	</div>
-	<div>
-   <h3>What are the rules for the race ?</h3>   
-   <br />
-   <p>We follow conventional triathlon race rules, Click <a href="rules.html" target="_blank">here</a> to view</p>
-  	</div>
- </div>
-</div>
-</div>
 </div>
 
- <div class="container" id="faq">
-	 <div class ="row">
-		<div class="col-md-12">
-			<h3 style>Have yet to clear your doubts?</h3>
-			<p style>Drop us a message on our FB page, NTURO or contact us at <a href="mailto:nturo.aquathlon@gmail.com">nturo.aquathlon@gmail.com</a></p>
+<!-- <div class="container sections" id="partners">
+    <div class="row">
+      <div class="col-md-12">
+       <h1 style="text-align:center;">Partners</h1>
+      </div>
+    </div>
+    <div class="row ">
+          <div class="col-6 mx-auto">
+            <img src="images/partners/tas.jpeg" style="margin-left: auto;margin-right: auto;height: auto;width:300px;max-width: 100%;display: block;margin-top:30px;margin-bottom:30px">
+            <p style="text-align:center"><b>NTURO is a race sanctioned by Triathlon Association of Singapore</b></p>
+          </div>
+    </div> 
+</div>
+<!-- <div class="container sections" id="sponsors">
+	 <div class="row">
+		  <div class="col-md-12">
+			 <h1 style="text-align:center;">Sponsors</h1>
+      </div>
+    </div>
+			<div class="row gold-sponsor">
+          <div class="col-6">
+            <img src="images/logo/horizontal.png">
+          </div>
+          <div class="col-6">
+            <img src="images/logo/horizontal.png">
+          </div>
+      </div> 
+      <div class="row silver-sponsor">
+          <div class="col-4">
+            <img src="images/logo/horizontal.png">
+          </div>
+          <div class="col-4">
+            <img src="images/logo/horizontal.png">
+          </div>
+          <div class="col-4">
+            <img src="images/logo/horizontal.png">
+          </div>
+      </div> 
+      <div class="row bronze-sponsor">
+          <div class="col-3">
+            <img src="images/logo/horizontal.png">
+          </div>
+          <div class="col-3">
+            <img src="images/logo/horizontal.png">
+          </div>
+          <div class="col-3">
+            <img src="images/logo/horizontal.png">
+          </div>
+          <div class="col-3">
+            <img src="images/logo/horizontal.png">
+          </div>
+      </div> 
+</div> -->
+<div class="container sections " id="volunteer">
+  <div class="row">
+    <div class="col-md-9 mx-auto">
+      <h1 style="text-align:center;">Volunteer</h1>
+      <p style="text-align:center;">
+        Fill up <a href="https://docs.google.com/forms/d/e/1FAIpQLSeTTfsS3d3CrKVEVgtcnhO1opMoCAt_xcFvZc-w_MV9zPmoMw/viewform" target="_blank">this form</a> and we'll contact you soon
+      </p>
     </div>
   </div>
- </div>
- </div>
+</div>
+<div class="container sections" id="faq">
+	<div class="row">
+		<div class="col-md-12">
+			<h1 style="text-align:center;">FAQ</h1>
+      <div>
+			<h3>
+				What is NTURO ?
+			</h3>
+			<p>It is an adaptation of Enduro race format that can be seen from Super League Triathlon races</p>
+    </div>
+    <div>
+      <h3>
+        How do I get to the race venue ?
+      </h3>
+      <p>
+      Public Bus Service 179 is available at Boon Lay Bus Interchange. Alight opposite Hall of Residence 6 and walk to Sports and Recreation Centre (SRC)
+      <br />
+      <br />
+      Another option is to take Public Bus Service 179 from Pioneer MRT Station Exit A and alight opposite Hall of Residence 6 and walk to Sports and Recreation Centre (SRC)
+      <br />
+      <br />
+      Alternatively, you may take Campus Weekend Rider (CWR) at Pioneer MRT Station Exit B bus stop area
+      <br />
+      <br />
+      More information is available <a href="http://www.ntu.edu.sg/AboutNTU/visitingntu/Pages/location.aspx">here</a>.
+      </p>
+    </div>
+    <div>
+      <h3>
+        What are the rules for the race ?
+      </h3>
+      <p>We follow conventional triathlon race rules, Click <a href="rules.html" target="_blank">here</a> to view</p>
+    </div>
+   <div>
+      <h3>
+        Why is the Team Category race format changed to Relay Category ?
+      </h3>
+      <p>
+        Due to popular demand, the NTURO Management Committee has changed the race format so as to allow everyone with different skill levels to participate in the race.
+      </p>
+    </div>
+    <div>
+      <h3>
+        What is the evaluation criteria for Relay Category ?
+      </h3>
+      <p>
+        A team of 3 participants will each do 1 set of (300m swim + 2km run). 
+        <br />
+        <br />
+        When the first member completes the 2km run, he/she will have to tap on the second member so that the second member can commence their segment. Same process goes for the second to third member.
+      </p>
+    </div>
+    <!-- <div>
+      <h3>
+        What do i get as a volunteer for NTURO ?
+      </h3>
+      <p>Fill up <a href="https://docs.google.com/forms/d/e/1FAIpQLSeTTfsS3d3CrKVEVgtcnhO1opMoCAt_xcFvZc-w_MV9zPmoMw/viewform">this form</a> and we'll contact you soon</p>
+    </div>-->
+    <div>
+      <h3>
+        I have a question that is not listed, how do I enquire ?
+      </h3>
+      <p>Email us your question with the email provided in the <a href="#contact">contact section</a></p>
+    </div>
+		</div>
+	</div>
 
- <footer>
+</div>
+
+
+<div class="container sections" id="contact" style="text-align:center;">
+	<div class="row">
+		<div class="col-md-12">
+			<h1 >Contact</h1>
+			<p style="text-align:center;">
+				For any queries, contact us at <a href="mailto:nturo.aquathlon@gmail.com">nturo.aquathlon@gmail.com</a>
+			</p>
+		</div>
+	</div>
+</div>
+
+
+<footer class="py-5 bg-light">
   <div class="container">
   <div class="row">
     <div class="col-3" style="overflow:hidden">
@@ -325,19 +458,19 @@
 
   <div class="col-3" style="overflow:hidden">
     <div class="float-right">
-      <a class="navbar-brand" href="https://www.instagram.com/nturo.ntuaquathlon/" style="margin-right:0">
+      <a class="navbar-brand" href="https://www.instagram.com/ntuaquathlon/" style="margin-right:0">
         <img src="images/ig.svg" alt="IG Logo" style="max-height:24px;">
       </a>
       <a class="navbar-brand" href="https://www.facebook.com/NTURO" style="margin-right:0">
         <img src="images/fb.svg" alt="FB Logo" style="max-height:24px;">
       </a>
-
+      
     </div>
   </div>
 
   </div>
   </div>
- </footer>
+</footer>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script>window.jQuery || document.write('<script src="https://getbootstrap.com/docs/4.2/assets/js/vendor/jquery-slim.min.js"><\/script>')</script><script src="https://getbootstrap.com/docs/4.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-zDnhMsjVZfS3hiP7oCBRmfjkQC4fzxVxFhBx8Hkz2aZX8gEvA/jsP3eXRCvzTofP" crossorigin="anonymous"></script><script>
   </script>
@@ -360,11 +493,10 @@
         document.location.href = url;
       }
     }
-
   </script>
 
 
 
- </body>
+</body>
 
 </html>
